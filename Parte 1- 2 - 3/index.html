@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página de prueba de JavaScript</title>
+    <!-- <script>alert("Hola mundo con JavaScript");</script> -->
+    <script src="01_.js"></script> <!-- asi se conecta el js --> 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+</head>
+<body>
+
+    <h1>variables</h1>
+    <ul>
+        <li>
+            <h3>¿Qué es el var?</h3>
+            <p>Es un tipo de variable que no lleva tipo de dato, se escribe varnombreVariable;
+                <br>
+                <br>
+                <b>Ejemplo</b>
+                <pre><code class="language-javascript">
+                const nombreUsuario = "Carlos";  // No va a cambiar<br>
+                let puntos = 0;  // Va a ir aumentando en el juego<br>
+                puntos = puntos + 10;  // ✅ Perfecto con let<br>
+                </code></pre>
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h3>¿Qué es el let?</h3>
+            <p>Se declara de la misma forma que el var. Sin embargo, se usa solo cuando que usar una variable
+                en unicamente una estuctura, bloque o una funcion en particular, declara que solo se puede usar
+                ahi y no en otro lugar.
+                <br>
+                <br>
+                <b>Ejemplo</b><br>
+                <pre><code class="language-javascript">
+                let contador = 0;
+                contador = 1; // ✅ Funciona bien<br>
+                contador = 2;  // ✅ Sigue funcionando<br>
+                let edad = 20;<br>
+                edad = edad + 1;  // ✅ Perfecto para ir cambiando valores<br>
+                </code></pre>
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h3>¿Qué es const?</h3>
+            <p>Es una variable que a lo igual que el let, se puede ocupar solo en un lugar en particular,
+                lo unico diferente es que tiene un valor constante... es decir, que no puede cambiar.
+                Si le vamos un valor a alguien, por ejemplo Lucia, Lucia no podrá dejar de llamarse Lucia, jamás.
+                <br>
+                <br>
+                <b>Ejemplo</b> <br>
+                <pre><code class="language-javascript">
+                const nombre = "María";<br>
+                const edad = 25;<br>
+                const PI = 3.14159;<br><br>
+                const precio = 100;<br>
+                precio = 200; // ❌ Error!
+                </code></pre>
+            </p>
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li>
+            <h3>Otros ejemplos de VAR, LET y CONST en JavaScript</h3>
+            <br>
+            <b>Ejemplo var</b>
+            <br>
+            <br>
+            <pre><code class="language-javascript">
+                if (true) {
+                var nombre = "Suscribete";
+                console.log(nombre);
+                }
+            </code></pre>
+            <p>Está bien. En la consola, al ejecutar el código se imprime <b>Suscribete</b></p>
+        </li>
+    </ul>
+
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
