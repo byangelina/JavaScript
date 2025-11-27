@@ -1,0 +1,54 @@
+
+body{
+padding: 2rem 3rem;
+}
+
+
+.hljs {
+    background: #f6f8fa !important;
+    padding: 15px !important;
+    border-radius: 5px;
+    }
+
+pre {
+    background: #f6f8fa !important;
+    border-radius: 6px;
+    margin: 0;  /* Quita el margen blanco */
+    overflow-x: auto;
+}
+
+
+
+/* Colores del codigo */
+.hljs-keyword {
+  color: #0066cc !important;  /* let, const, var, function */
+}
+
+.hljs-variable,
+.hljs-name {
+  color: #6600cc !important;  /* nombres de variables */
+}
+
+.hljs-string {
+  color: #cc6600 !important;  /* textos entre comillas */
+}
+
+.hljs-number {
+  color: #009966 !important;  /* números */
+}
+
+.hljs-comment {
+  color: #8f8f8f !important;  /* comentarios */
+}
+
+.hljs-function {
+  color: #d73a49 !important;  /* nombres de funciones */
+}
+
+.hljs-built_in {
+  color: #005cc5 !important;  /* console, Math, etc */
+}
+
+.hljs {
+  color: #d685ad !important;  /* Color base para texto sin clase específica */
+}
