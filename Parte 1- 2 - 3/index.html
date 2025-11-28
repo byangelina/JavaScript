@@ -14,79 +14,107 @@
 
 </head>
 <body>
+    <header>
+        <h1>Apuntes de JavaScript</h1>
+    </header>
 
-    <h1>variables</h1>
-    <ul>
-        <li>
-            <h3>¿Qué es el var?</h3>
-            <p>Es un tipo de variable que no lleva tipo de dato, se escribe varnombreVariable;
-                <br>
-                <br>
-                <b>Ejemplo</b>
+    <div class="content">
+        <h1>variables</h1>
+        <ul>
+            <li>
+                <h3>¿Qué es var?</h3>
+                <p>Es un tipo de variable que no lleva tipo de dato, se escribe <span>varNombreVariable;</span></p>
+                <b>Ejemplo 1</b>
                 <pre><code class="language-javascript">
-                const nombreUsuario = "Carlos";  // No va a cambiar<br>
-                let puntos = 0;  // Va a ir aumentando en el juego<br>
-                puntos = puntos + 10;  // ✅ Perfecto con let<br>
+                const nombreUsuario = "Carlos";  // No va a cambiar
+                let puntos = 0;  // Va a ir aumentando en el juego
+                
+                puntos = puntos + 10;  // ✅ Perfecto con let
                 </code></pre>
-            </p>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>¿Qué es el let?</h3>
-            <p>Se declara de la misma forma que el var. Sin embargo, se usa solo cuando que usar una variable
-                en unicamente una estuctura, bloque o una funcion en particular, declara que solo se puede usar
-                ahi y no en otro lugar.
                 <br>
-                <br>
-                <b>Ejemplo</b><br>
+                <b>Ejemplo 2</b>
                 <pre><code class="language-javascript">
-                let contador = 0;
-                contador = 1; // ✅ Funciona bien<br>
-                contador = 2;  // ✅ Sigue funcionando<br>
-                let edad = 20;<br>
-                edad = edad + 1;  // ✅ Perfecto para ir cambiando valores<br>
-                </code></pre>
-            </p>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>¿Qué es const?</h3>
-            <p>Es una variable que a lo igual que el let, se puede ocupar solo en un lugar en particular,
-                lo unico diferente es que tiene un valor constante... es decir, que no puede cambiar.
-                Si le vamos un valor a alguien, por ejemplo Lucia, Lucia no podrá dejar de llamarse Lucia, jamás.
-                <br>
-                <br>
-                <b>Ejemplo</b> <br>
-                <pre><code class="language-javascript">
-                const nombre = "María";<br>
-                const edad = 25;<br>
-                const PI = 3.14159;<br><br>
-                const precio = 100;<br>
-                precio = 200; // ❌ Error!
-                </code></pre>
-            </p>
-        </li>
-    </ul>
-    <br>
-    <ul>
-        <li>
-            <h3>Otros ejemplos de VAR, LET y CONST en JavaScript</h3>
-            <br>
-            <b>Ejemplo var</b>
-            <br>
-            <br>
-            <pre><code class="language-javascript">
                 if (true) {
                 var nombre = "Suscribete";
+                
                 console.log(nombre);
                 }
-            </code></pre>
-            <p>Está bien. En la consola, al ejecutar el código se imprime <b>Suscribete</b></p>
-        </li>
-    </ul>
+                </code></pre>
+                <p>Está bien ✅. En la consola, al ejecutar el código se imprime <span>Suscribete</span>.</p>
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <li>
+                <h3>¿Qué es let?</h3>
+                <p>Se declara de la misma forma que el var. Sin embargo, se usa solo cuando que usar una variable
+                en unicamente una estuctura, bloque o una funcion en particular, declara que solo se puede usar
+                ahí y no en otro lugar.</p>
+                <b>Ejemplo 1</b>
+                <pre><code class="language-javascript">
+                let contador = 0;
+                contador = 1; // ✅ Funciona bien
+                contador = 2;  // ✅ Sigue funcionando
+                
+                let edad = 20;
+                edad = edad + 1;  // ✅ Perfecto para ir cambiando valores
+                </code></pre>
+                <br>
 
+                <b>Ejemplo 2</b>
+                <pre><code class="language-javascript">
+                if (true){
+                let nombre = "Suscribete";
+                }
+
+                console.log(nombre);
+                </code></pre>
+
+                <p>Esto no se puede hacer, <mark>da error</mark> ❌.
+                No existe <mark>nombre</mark> afuera, se encuentra adentro del bloque <span>if</span> solamente,
+                esto ocurre porque es un <span>let</span>, un tipo de dato que solo funciona en un <mark>lugar especifico,</mark> no en todas partes.</p>
+                
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <li>
+                <h3>¿Qué es const?</h3>
+                <p>Es una variable que a lo igual que el let, se puede ocupar solo en <mark>un solo lugar en particular,</mark>
+                lo unico diferente es que tiene un valor constante... es decir, que <mark>no puede cambiar.</mark>
+                Si le vamos un valor a alguien, por ejemplo Lucia, Lucia no podrá dejar de llamarse Lucia, jamás.</p>
+                
+                <b>Ejemplo 1</b>
+                <pre><code class="language-javascript">
+                const nombre = "María";
+                const edad = 25;
+                const PI = 3.14159;
+                const precio = 100;
+                precio = 200; // ❌ Error!
+                </code></pre>
+                
+                <b>Ejemplo 2</b>
+                <pre><code class="language-javascript">
+                const email = "nombre@mail.com";
+                email = "otro_mail@mail.com"
+                </code></pre>
+                <p>Esto no se puede hacer ❌. Porque email ya tiene un nombre asignado , a email no le puedo dar otro valor, <mark> es único.</mark></p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <script>hljs.highlightAll();</script>
 </body>
 </html>
