@@ -1,0 +1,246 @@
+
+/* Generales */
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #090909;
+  color: rgb(192, 196, 200);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  font-size: 15px;  
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+
+/* Header */
+header {
+  background:#101010b9;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.385);
+  width: 100%
+}
+
+header h1 {
+  color: #cd6aa0;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+span{
+  color: rgb(255, 0, 119);
+  font-weight: 600;
+}
+
+h3{
+  color: #8860c0;
+  font-weight: 700;
+}
+
+p{
+  text-align: justify;
+}
+
+
+/* Especificos */
+
+.hljs {
+  background: #111213 !important;
+  padding: 15px !important;
+  border-radius: 5px;
+  }
+
+pre {
+  background: #111213 !important;
+  border-radius: 6px;
+  margin: 3px 0 1rem 0;
+  overflow-x: auto;
+}
+
+
+/* Colores del codigo */
+.hljs-keyword {
+  color: #0066cc !important;  /* let, const, var, function */
+}
+
+.hljs-variable,
+.hljs-name {
+  color: #6600cc !important;  /* nombres de variables */
+}
+
+.hljs-string {
+  color: #cc6600 !important;  /* textos entre comillas */
+}
+
+.hljs-number {
+  color: #009966 !important;  /* números */
+}
+
+.hljs-comment {
+  color: #5a5a5a !important;  /* comentarios */
+  font-weight: 100 !important;
+}
+
+.hljs-function {
+  color: #d73a49 !important;  /* nombres de funciones */
+}
+
+.hljs-built_in {
+  color: #005cc5 !important;  /* console, Math, etc */
+}
+
+.hljs {
+  color: #d685ad !important;  /* Color base para texto sin clase específica */
+}
+
+.hljs-meta .hljs-string, .hljs-string, .hljs-number{
+  color: #d69d85;
+  font-weight: 100;
+}
+
+
+
+/* Destacador rosa */
+mark {
+  background-color: #061926;  /* Amarillo destacador */
+  color: #e1dddd;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive*/
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem 2rem;
+  }
+
+  header h1 {
+    font-size: large;
+    letter-spacing: 1px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  ul{
+    padding: 0;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  .hljs {
+    padding: 12px !important;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+    margin: 0 1.5rem;
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+
+  header h1 {
+    font-size: large;
+    letter-spacing: 1px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li{
+    margin-bottom: 1.5rem;
+  }
+
+  pre {
+  font-size: 11px;  /* Más pequeño */
+  overflow-x: auto;
+  white-space: pre;  /* Mantiene el formato */
+  margin: 3px -0.5rem 1rem -0.5rem;  /* Se expande más allá del contenedor */
+  padding: 10px 0.5rem !important;
+  }
+
+  .hljs {
+    padding: 10px !important;
+    font-size: 11px;
+  }
+
+  code {
+  word-wrap: normal;
+  white-space: pre;
+  }
+
+  mark {
+    padding: 0 3px;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+  .content {
+    padding: 0.75rem 0.75rem;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  pre {
+    font-size: 10px;
+  }
+
+  .hljs {
+  padding: 8px !important;
+  }
+
+  ul{
+    padding-left: 0 !important;
+  }
+
+  header h1 {
+    font-size: large;
+  }
+}
