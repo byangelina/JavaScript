@@ -222,14 +222,14 @@ mark {
 
 
 /* Responsive*/
-/* Tablets (pantallas medianas) */
+/* Tablets (pantallas medianas) ------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
   .content {
     padding: 1.5rem 2rem;
   }
 
   header h1 {
-    font-size: large;
+    font-size: 25px;
     letter-spacing: 1px;
   }
 
@@ -238,7 +238,19 @@ mark {
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+  }
+
+  h1{
+  font-size: 2rem;
+  }
+
+  p{
+    font-size: 19px;
+  }
+
+  b{
+    font-size: 20px;
   }
 
   ul{
@@ -246,7 +258,7 @@ mark {
   }
 
   pre {
-    font-size: 13px;
+    font-size: 20px;
   }
 
   .hljs {
@@ -254,7 +266,25 @@ mark {
   }
 }
 
-/* Móviles (pantallas pequeñas) */
+  .onenote-menu h2 {
+    font-size: 23px;
+    padding-left: 30px;
+  }
+
+    .onenote-menu a {
+    font-size: 23px;
+    padding-left: 30px;
+  }
+  
+    ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+
+
+
+/* Móviles (pantallas pequeñas) ------------------------------------------------------------------------------*/
 @media (max-width: 480px) {
   .content {
     padding: 1rem;
@@ -275,11 +305,15 @@ mark {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 18px;
   }
 
   ul{
@@ -292,7 +326,7 @@ mark {
   }
 
   pre {
-  font-size: 11px;  /* Más pequeño */
+  font-size: 20px;  /* Más pequeño */
   overflow-x: auto;
   white-space: pre;  /* Mantiene el formato */
   margin: 3px -0.5rem 1rem -0.5rem;  /* Se expande más allá del contenedor */
@@ -301,7 +335,7 @@ mark {
 
   .hljs {
     padding: 10px !important;
-    font-size: 11px;
+    font-size: 18px;
   }
 
   code {
@@ -314,7 +348,9 @@ mark {
   }
 }
 
-/* Móviles muy pequeños */
+
+
+/* Móviles muy pequeños ------------------------------------------------------------------------------*/
 @media (max-width: 360px) {
   .content {
     padding: 0.75rem 0.75rem;
@@ -342,7 +378,7 @@ mark {
 }
 
 
-/* En pantallas grandes → header fijo arriba, como querías originalmente */
+/* En pantallas grandes → header fijo arriba, como querías originalmente -----------------------------*/
 @media (min-width: 768px) {
   header {
     position: fixed;
