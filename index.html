@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Página de prueba de JavaScript</title>
-    <!-- <script>alert("Hola mundo con JavaScript");</script> -->
-    <script src="01_.js"></script> <!-- asi se conecta el js --> 
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de prueba de JavaScript</title> <!-- <script>alert("Hola mundo con JavaScript");</script> -->
+    <script src="index.js"></script> <!-- asi se conecta el js -->
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
 </head>
 <body>
 
+    <!--menú lateral estilo OneNote-->
+    <div class="onenote-menu" id="menu">
+        <h2>Secciones</h2>
+        <ul>
+            <li><a href="#page-variables">Variables</a></li>
+            <li><a href="#">Condicionales</a></li>
+            <li><a href="#">Funciones</a></li>
+            <li><a href="#">Bucles</a></li>
+        </ul>
+    </div>
+    <!-- Backdrop (invisible, para cerrar si se hace click fuera) -->
+    <div id="menuBackdrop" class="menu-backdrop" aria-hidden="true"></div>
+
+
     <header>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" style="margin-left: 10px;">☰</button>
         <h1>Apuntes de JavaScript ☺</h1>
     </header>
+    
 
     <div class="content">
         <div class="page-section active" id="page-variables"></div>
@@ -105,7 +115,7 @@ email = "otro_mail@mail.com"
             </ul>
         </div>
     </div>
-
     <script>hljs.highlightAll();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </body>
 </html>

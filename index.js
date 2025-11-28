@@ -1,30 +1,40 @@
 
-// esto es para el menu de la pagina (todavia no lo ocupo)
+// esto es para el menu de la pagina
+document.addEventListener("DOMContentLoaded", () => {
 
-function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-            
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('active');
+    // Highlight.js (si está cargado)
+    if (window.hljs) {
+        hljs.highlightAll();
+    }
+
+    // --- MENÚ LATERAL ---
+    const menu = document.getElementById('menu');
+    const toggle = document.getElementById('menuToggle');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    console.log("MENU:", menu);
+    console.log("BOTÓN:", toggle);
+    console.log("BACKDROP:", backdrop);
+
+    // Mostrar / ocultar menú
+    toggle.addEventListener('click', () => {
+        console.log("click!");
+        menu.classList.toggle('open');
+        backdrop.classList.toggle('visible');
+    });
+
+    // Cerrar al hacer click en el backdrop
+    backdrop.addEventListener('click', () => {
+        menu.classList.remove('open');
+        backdrop.classList.remove('visible');
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            menu.classList.remove('open');
+            backdrop.classList.remove('visible');
         }
+    });
 
-        function showPage(pageName) {
-            const allPages = document.querySelectorAll('.page-section');
-            allPages.forEach(page => page.classList.remove('active'));
-            
-            const selectedPage = document.getElementById('page-' + pageName);
-            selectedPage.classList.add('active');
-            
-            const allLinks = document.querySelectorAll('.page-link');
-            allLinks.forEach(link => link.classList.remove('active'));
-            event.target.closest('.page-link').classList.add('active');
-            
-            if (window.innerWidth <= 768) {
-                toggleSidebar();
-            }
-            
-            window.scrollTo(0, 0);
-        }
-
-        document.getElementById('overlay').addEventListener('click', toggleSidebar);
+});

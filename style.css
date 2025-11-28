@@ -18,14 +18,22 @@ body{
 
 /* Header */
 header {
-  background:#101010b9;
-  padding: 1.5rem 0;
+  position: relative;
+  background: #111214;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;          /* Alinea verticalmente */
+  justify-content: center;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.385);
   width: 100%
 }
 
 header h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
   color: #cd6aa0;
   font-size: 1rem;
   margin: 0;
@@ -47,6 +55,94 @@ h3{
 p{
   text-align: justify;
 }
+
+
+
+
+
+
+/* ===== Menú estilo OneNote (estable) ===== */
+.onenote-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 7rem 1rem;
+  background: #111214;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.4);
+  transform: translateX(-100%); /* oculto a la izquierda */
+  transition: transform 250ms ease;
+  z-index: 1200;
+}
+
+/* Estado abierto */
+.onenote-menu.open {
+  transform: translateX(0);
+}
+
+/* Tipografía y links (coincide con tu estilo) */
+.onenote-menu h2 {
+  color: #cd6aa0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.onenote-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.onenote-menu li { margin: 0.8rem 0; }
+
+.onenote-menu a {
+  color: rgb(192, 196, 200);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+}
+
+.onenote-menu a:hover { background: #1d1d1f; }
+
+/* ===== Backdrop (invisible pero captura clicks) ===== */
+.menu-backdrop {
+  position: fixed;
+  inset: 0; /* top:0;right:0;bottom:0;left:0; */
+  display: none;
+  z-index: 1100;
+  background: rgba(0,0,0,0); /* invisible; cámbialo si quieres oscurecer */
+}
+
+/* mostrar backdrop cuando el menú abierto */
+.menu-backdrop.visible { display: block; }
+
+.menu-toggle {
+    position: static;
+    margin-right: auto;           /* Hace que quede pegado a la izquierda */
+    font-size: 1.6rem;
+    background: #111214;
+    color: #cd6aa0;
+    border: 1px solid #303030;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* Opcional: estilo cuando abierto */
+
+
+
+
+
+
+
 
 
 /* Especificos */
@@ -242,5 +338,20 @@ mark {
 
   header h1 {
     font-size: large;
+  }
+}
+
+
+/* En pantallas grandes → header fijo arriba, como querías originalmente */
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1500;
+  }
+
+  body {
+    padding-top: 80px; /* para que no tape el contenido */
   }
 }
