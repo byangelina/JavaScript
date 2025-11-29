@@ -34,7 +34,7 @@ header h1 {
   flex: 1;
   text-align: center;
   margin: 0;
-  color: #cd6aa0;
+  color: #c65884;
   font-size: 1rem;
   margin: 0;
   font-weight: 700;
@@ -69,7 +69,7 @@ p{
   width: 240px;
   height: 100vh;
   padding: 7rem 1rem;
-  background: #111214;
+  background: #c65884;
   box-shadow: 4px 0 10px rgba(0,0,0,0.4);
   transform: translateX(-100%); /* oculto a la izquierda */
   transition: transform 250ms ease;
@@ -83,7 +83,7 @@ p{
 
 /* Tipografía y links (coincide con tu estilo) */
 .onenote-menu h2 {
-  color: #cd6aa0;
+  color: #1e1d1e;
   font-size: 1rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -125,10 +125,10 @@ p{
 .menu-toggle {
     position: static;
     margin-right: auto;           /* Hace que quede pegado a la izquierda */
-    font-size: 1.6rem;
-    background: #111214;
-    color: #cd6aa0;
-    border: 1px solid #303030;
+    font-size: 1.2rem;
+    background: #c7618a;
+    color: #151112;
+    border: 1px solid #c65884;
     border-radius: 6px;
     padding: 6px 10px;
     cursor: pointer;
@@ -200,7 +200,6 @@ pre {
   color: #d69d85;
   font-weight: 100;
 }
-
 
 
 /* Destacador rosa */
@@ -288,7 +287,7 @@ mark {
 @media (max-width: 480px) {
   .content {
     padding: 1rem;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
   }
 
   header {
@@ -309,11 +308,15 @@ mark {
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   p{
-    font-size: 18px;
+    font-size: 13px;
+  }
+
+  b{
+    font-size: 15px;
   }
 
   ul{
@@ -335,7 +338,7 @@ mark {
 
   .hljs {
     padding: 10px !important;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   code {
@@ -346,6 +349,14 @@ mark {
   mark {
     padding: 0 3px;
   }
+}
+
+.onenote-menu h2 {
+    font-size: 18px;
+}
+
+.onenote-menu a {
+    font-size: 16px;
 }
 
 
