@@ -6,7 +6,7 @@ body{
   margin: 0;
   background-color: #090909;
   color: rgb(192, 196, 200);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 15px;  
 }
 
@@ -54,8 +54,8 @@ h3{
 
 p{
   text-align: justify;
+  line-height: 1.9;
 }
-
 
 
 
@@ -262,6 +262,7 @@ mark {
 
   .hljs {
     padding: 12px !important;
+    line-height: 1.5;
   }
 }
 
@@ -338,7 +339,7 @@ mark {
 
   .hljs {
     padding: 10px !important;
-    font-size: 14px;
+    font-size: 13.2px;
   }
 
   code {
