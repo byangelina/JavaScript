@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de prueba de JavaScript</title> <!-- <script>alert("Hola mundo con JavaScript");</script> -->
+    
     <script src="index.js"></script> <!-- asi se conecta el js -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
-<body>
 
-    <!--menú lateral estilo OneNote-->
+
+<!--menú lateral ------------------------------------------------------------------------------------------------------------------------>
+<body>
     <div class="onenote-menu" id="menu">
         <h2>Secciones</h2>
         <ul>
@@ -18,73 +22,85 @@
             <li><a href="#">Funciones</a></li>
             <li><a href="#">Bucles</a></li>
         </ul>
-    </div>
+    </div
+
+><!--esto todavia no lo uso-->
+<!--<div>
+    <h2 class="firma">Angela</h2>   
+</div>
+-->
+
     <!-- Backdrop (invisible, para cerrar si se hace click fuera) -->
     <div id="menuBackdrop" class="menu-backdrop" aria-hidden="true"></div>
-
-
     <header>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" style="margin-left: 25px">☰</button>
         <h1>Apuntes de JavaScript ☺</h1>
     </header>
 
 
+<!--Contenido de la pagina -------------------------------------------------------------------------------------------------------------->    
     <div class="content">
         <div class="page-section active" id="page-variables"></div>
-            <h1>variables</h1>
+            <h1>Variables</h1>
             <ul>
                 <li>
                     <h3>¿Qué es var?</h3>
-                    <p>Es un tipo de variable que no lleva tipo de dato, se escribe <span>varNombreVariable;</span></p>
+                    <p>Es un tipo de variable que no lleva tipo de dato, se escribe <span>var nombreVariable;</span></p>
                     <b>Ejemplo 1</b>
-                    <pre><code class="language-javascript">
+
+<pre><code class="language-javascript">
 const nombreUsuario = "Carlos";  // No va a cambiar
 let puntos = 0;  // Va a ir aumentando en el juego
 
 puntos = puntos + 10;  // ✅ Perfecto con let
-                    </code></pre>
+
+</code></pre>
                     <br>
                     <b>Ejemplo 2</b>
-                    <pre><code class="language-javascript">
+<pre><code class="language-javascript">
 if (true) {
 var nombre = "Suscribete";
 
 console.log(nombre);
 }
-                    </code></pre>
-                    <p>Está bien ✅. En la consola, al ejecutar el código se imprime <span>Suscribete</span>.</p>
+
+</code></pre>
+                    <p>Está bien ✅. Al ejecutar el código en la consola, se imprime <span>Suscribete</span>.</p>
                 </li>
             </ul>
             <br>
             <ul>
                 <li>
                     <h3>¿Qué es let?</h3>
-                    <p>Se declara de la misma forma que el var. Sin embargo, se usa solo cuando que usar una variable
-                    en unicamente una estuctura, bloque o una funcion en particular, declara que solo se puede usar
-                    ahí y no en otro lugar.</p>
+                    <p>Se declara de la misma forma que var. Sin embargo, funciona solo cuando que usa una variable
+                    en <mark>unicamente</mark> una estuctura, bloque o funcion en particular. Esto declara que solo se puede usar
+                    ahí y en ningún otro lugar.</p>
                     <b>Ejemplo 1</b>
-                    <pre><code class="language-javascript">
+
+<pre><code class="language-javascript">
 let contador = 0;
 contador = 1; // ✅ Funciona bien
 contador = 2;  // ✅ Sigue funcionando
 
 let edad = 20;
 edad = edad + 1; // ✅ Perfecto para ir cambiando valores
-                    </code></pre>
-                    <br>
 
+</code></pre>
+                    <br>
                     <b>Ejemplo 2</b>
-                    <pre><code class="language-javascript">
+
+<pre><code class="language-javascript">
 if (true){
 let nombre = "Suscribete";
 }
 
 console.log(nombre);
-                    </code></pre>
+
+</code></pre>
 
                     <p>Esto no se puede hacer, <mark>da error</mark> ❌.
-                    No existe <mark>nombre</mark> afuera, se encuentra adentro del bloque <span>if</span> solamente,
-                    esto ocurre porque es un <span>let</span>, un tipo de dato que solo funciona en un <mark>lugar especifico,</mark> no en todas partes.</p>
+                    En este caso, <mark>no existe</mark> <span>nombre</span> afuera, este se encuentra dentro del bloque <span>if</span>.
+                    Esto ocurre porque es un <span>let</span>, un tipo de dato que solo funciona en un <mark>lugar especifico, no en todas partes.</mark></p>
                     
                 </li>
             </ul>
@@ -92,32 +108,56 @@ console.log(nombre);
             <ul>
                 <li>
                     <h3>¿Qué es const?</h3>
-                    <p>Es una variable que a lo igual que el let, se puede ocupar solo en <mark>un solo lugar en particular,</mark>
-                    lo unico diferente es que tiene un valor constante... es decir, que <mark>no puede cambiar.</mark>
-                    Si le vamos un valor a alguien, por ejemplo Lucia, Lucia no podrá dejar de llamarse Lucia, jamás.</p>
-                    
+                    <p>Es una variable que a lo igual que let, se puede ocupar <mark>en un solo lugar en particular,</mark>
+                    lo unico diferente es que tiene un valor constante... es decir, <mark>no puede cambiar.</mark>
+                    Si le damos un valor a alguien, por ejemplo a Lucia, <mark>Lucia no podrá dejar de llamarse Lucia</mark>, jamás.</p>
                     <b>Ejemplo 1</b>
-                    <pre><code class="language-javascript">
+
+<pre><code class="language-javascript">
 const nombre = "María";
 const edad = 25;
 const PI = 3.14159;
 const precio = 100;
 
 precio = 200; // ❌ Error!
-                    </code></pre>
-                    
+
+</code></pre>
+
                     <b>Ejemplo 2</b>
-                    <pre><code class="language-javascript">
+<pre><code class="language-javascript">
 const email = "nombre@mail.com";
 email = "otro_mail@mail.com"
-                    </code></pre>
-                    <p>Esto no se puede hacer ❌. Porque email ya tiene un nombre asignado , a email no le puedo dar otro valor, <mark> es único.</mark></p>
+
+</code></pre>
+                    <p>Esto no se puede hacer ❌ porque email ya tiene un nombre asignado. A email no le puedo dar otro valor, <mark> porque <span>const</span> es único.</mark></p>
                 </li>
             </ul>
             <br>
             <br>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </body>

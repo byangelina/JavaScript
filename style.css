@@ -1,4 +1,17 @@
 
+/*funetes*/
+/*@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.dancing-script-firma {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+
+
 /* Generales */
 
 body{
@@ -7,7 +20,8 @@ body{
   background-color: #090909;
   color: rgb(192, 196, 200);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 15px;  
+  font-size: 18px;  
+  font-weight: 100
 }
 
 .content {
@@ -35,7 +49,7 @@ header h1 {
   text-align: center;
   margin: 0;
   color: #c65884;
-  font-size: 1rem;
+  font-size: 20px;
   margin: 0;
   font-weight: 700;
   text-transform: uppercase;
@@ -76,15 +90,13 @@ p{
   z-index: 1200;
 }
 
-/* Estado abierto */
 .onenote-menu.open {
   transform: translateX(0);
 }
 
-/* Tipografía y links (coincide con tu estilo) */
 .onenote-menu h2 {
   color: #1e1d1e;
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -102,7 +114,7 @@ p{
 .onenote-menu a {
   color: rgb(192, 196, 200);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 17px;
   display: block;
   padding: 0.2rem 0.2rem;
   border-radius: 5px;
@@ -110,22 +122,20 @@ p{
 
 .onenote-menu a:hover { background: #1d1d1f; }
 
-/* ===== Backdrop (invisible pero captura clicks) ===== */
 .menu-backdrop {
   position: fixed;
-  inset: 0; /* top:0;right:0;bottom:0;left:0; */
+  inset: 0; 
   display: none;
   z-index: 1100;
-  background: rgba(0,0,0,0); /* invisible; cámbialo si quieres oscurecer */
+  background: rgba(0,0,0,0); 
 }
 
-/* mostrar backdrop cuando el menú abierto */
 .menu-backdrop.visible { display: block; }
 
 .menu-toggle {
     position: static;
-    margin-right: auto;           /* Hace que quede pegado a la izquierda */
-    font-size: 1.2rem;
+    margin-right: auto;           
+    font-size: 17px;
     background: #c7618a;
     color: #151112;
     border: 1px solid #c65884;
@@ -135,7 +145,16 @@ p{
     z-index: 2000;
 }
 
-/* Opcional: estilo cuando abierto */
+/* todavia no lo uso
+.firma h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:lowercase;
+  color: #090909;
+}
+*/
 
 
 
@@ -149,7 +168,7 @@ p{
 
 .hljs {
   background: #111213 !important;
-  padding: 15px !important;
+  padding: 20px !important;
   border-radius: 5px;
   }
 
@@ -158,6 +177,13 @@ pre {
   border-radius: 6px;
   margin: 3px 0 1rem 0;
   overflow-x: auto;
+
+}
+
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    font-size: 16px;
 }
 
 
@@ -330,11 +356,11 @@ mark {
   }
 
   pre {
-  font-size: 20px;  /* Más pequeño */
-  overflow-x: auto;
-  white-space: pre;  /* Mantiene el formato */
-  margin: 3px -0.5rem 1rem -0.5rem;  /* Se expande más allá del contenedor */
-  padding: 10px 0.5rem !important;
+    font-size: 14px;  /* Más pequeño */
+    overflow-x: auto;
+    white-space: pre;  /* Mantiene el formato */
+    margin: 3px -0.5rem 1rem -0.5rem;  /* Se expande más allá del contenedor */
+    padding: 10px 0.5rem !important;
   }
 
   .hljs {
@@ -343,8 +369,8 @@ mark {
   }
 
   code {
-  word-wrap: normal;
-  white-space: pre;
+    word-wrap: normal;
+    white-space: pre;
   }
 
   mark {
@@ -377,7 +403,7 @@ mark {
   }
 
   .hljs {
-  padding: 8px !important;
+    padding: 8px !important;
   }
 
   ul{
@@ -402,4 +428,13 @@ mark {
   body {
     padding-top: 80px; /* para que no tape el contenido */
   }
+
+  .hljs {
+    padding: 10px !important;
+  }
+
+  pre {
+    font-size: 15px !important;
+  }
+
 }
